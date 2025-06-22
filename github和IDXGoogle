@@ -40,3 +40,23 @@ cd ~ && wget https://raw.githubusercontent.com/zhumengkang/agsb/main/agsb.py && 
 4. 请输入自定义域名 (例如: test.zmkk.fun, 必须是与Argo Token关联的域名): 
 
 上传agsb.py文件执行python3 agsb.py命令只能用临时隧道，不支持添加参数
+
+甬哥脚本
+仅argo临时隧道，固定隧道必须填写端口(vmpt)、域名(agn)、token(agk)、uuid
+
+类似无公网的【IDX Google VPS】容器推荐使用此脚本，快速一键内网穿透获取节点
+
+uuid="" vmpt="" argo="y" agn="" agk="" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
+
+uuid="7f9a71cd-6f06-4338-badf-d1b0c86c5503" vmpt="49999" argo="y" agn="idxgit.rg520.dpdns.org" agk="eyJhIjoiNzdiNzY1YmViZjhlMGRiZDAwZjg0MjRiOTM4NWI0ZGUiLCJ0IjoiODU5NTZlYmUtMjRjZC00OWY5LWJmNTQtYTgzNzRlNmYwZDVlIiwicyI6Ik1EVmtNR0ZrWW1RdE1HUmpaaTAwT1dWa0xXSTBPR1F0T0RnNU1UWmhNREpqTUdWbCJ9" bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh)
+
+卸载脚本：
+
+agsb del 或者 bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/argosb/main/argosb.sh) del
+
+可以上传argosb.sh文件，执行bash argosb.sh命令，执行此脚本命令时，请在脚本前至少设置一个协议变量才能安装成功，例如：
+uuid="7f9a71cd-6f06-4338-badf-d1b0c86c5503" vmpt="49999" argo="y" agn="idxgit.rg520.dpdns.org" agk="eyJhIjoiNzdiNzY1YmViZjhlMGRiZDAwZjg0MjRiOTM4NWI0ZGUiLCJ0IjoiODU5NTZlYmUtMjRjZC00OWY5LWJmNTQtYTgzNzRlNmYwZDVlIiwicyI6Ik1EVmtNR0ZrWW1RdE1HUmpaaTAwT1dWa0xXSTBPR1F0T0RnNU1UWmhNREpqTUdWbCJ9" bash argosb.sh
+
+项目地址yonggekkk：
+
+https://github.com/yonggekkk/ArgoSB
