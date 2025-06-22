@@ -1,0 +1,42 @@
+仅argo临时隧道，固定隧道必须填写端口(port)、域名(domain)、CF隧道token(agk)、uuid等参数，这里端口为49999，那么cloudflare隧道就填填localhost:49999
+
+类似无公网的【IDX Google VPS】github代码空间容器推荐使用此脚本，快速一键内网穿透获取节点
+
+脚本地址
+
+https://github.com/zhumengkang/agsb/tree/main
+
+免root固定域名一键安装命令
+
+cd ~ && curl -fsSL https://raw.githubusercontent.com/zhumengkang/agsb/main/agsb-v2.py | python3 - install --uuid b1ebd5fc-填这里-a39c9fc65298 --port 49999 --agk CF-token --domain 自己的域名
+或者
+cd ~ && wget https://raw.githubusercontent.com/zhumengkang/agsb/main/agsb.py && python3 agsb.py install --uuid 25bd7521-填这里-a50a-97e432552aca --port 49999 --agk CF-token --domain 自己的域名
+
+
+
+节点信息获取
+
+│ 单行节点列表保存到: .agsb/allnodes.txt
+
+│ README文件保存到: .agsb/README.md
+
+│ 使用 python3 agsb.py status 查看节点信息
+
+│ 使用 python3 agsb.py del 删除节点
+
+
+如果在手机浏览器中无法复制节点信息，可以在手机termux中输入命令生成节点信息，复制过来用即可
+
+
+可以上传agsb-v2.py文件，执行python3 agsb-v2.py命令引导进行安装。
+如下引导：
+
+1. 请输入自定义UUID (例如: 25bd7521-eed2-45a1-a50a-97e432552aca, 留空则随机生成): 
+
+2. 请输入自定义Vmess端口 (例如: 49999, 10000-65535,  留空则随机生成): 
+
+3. 请输入 Argo Tunnel Token (AGK) (例如: eyJhIjo...Ifs9, 若使用Cloudflare Zero Trust隧道请输入, 留空则 使用临时隧道): 
+
+4. 请输入自定义域名 (例如: test.zmkk.fun, 必须是与Argo Token关联的域名): 
+
+上传agsb.py文件执行python3 agsb.py命令只能用临时隧道，不支持添加参数
