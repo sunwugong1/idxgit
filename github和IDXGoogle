@@ -1,6 +1,6 @@
 仅argo临时隧道，固定隧道必须填写端口(port)、域名(domain)、CF隧道token(agk)、uuid等参数，这里端口为49999，那么cloudflare隧道就填填localhost:49999
 
-类似无公网的【IDX Google VPS】github代码空间容器推荐使用此脚本，快速一键内网穿透获取节点
+类似无公网的【IDX Google VPS】等容器推荐使用此脚本，快速一键内网穿透获取节点
 
 脚本地址
 
